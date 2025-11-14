@@ -154,8 +154,12 @@ body {
   transform: rotate(90deg) scale(1.1); /* Fun rotate effect */
 }
 
-footer{
-    text-align: center;
-    color: #fff;
-    margin-top: 20px;
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 0.9rem;
+  opacity: 0.9;
 }
