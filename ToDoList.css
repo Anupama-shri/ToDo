@@ -153,3 +153,9 @@ body {
   background-color: #c0392b; /* Darker red on hover */
   transform: rotate(90deg) scale(1.1); /* Fun rotate effect */
 }
+
+footer{
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+}
