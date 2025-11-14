@@ -1,0 +1,155 @@
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* --- Global Styles & Resets --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Makes layout calculations easier */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* A beautiful, soft gradient background */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+/* --- Main App Container --- */
+#main {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  
+  /* "Glassmorphism" effect */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* --- Heading --- */
+.heading {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 25px;
+  /* Adds a subtle text shadow for depth */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Input Area Container --- */
+#container {
+  display: flex;
+  gap: 10px; /* Adds space between the input and button */
+  margin-bottom: 25px;
+}
+
+/* --- Task Input Field --- */
+#task {
+  flex: 1; /* Takes up all available space */
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  padding: 12px 15px;
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#task::placeholder {
+  color: #888;
+}
+
+/* Style for when the user clicks into the input */
+#task:focus {
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.5);
+}
+
+/* --- "Add" Button --- */
+#btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #764ba2; /* Matches the gradient */
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#btn:hover {
+  background-color: #667eea; /* The other gradient color */
+  transform: translateY(-2px); /* Lifts the button slightly */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Task List (UL) --- */
+#task_list {
+  list-style-type: none; /* Removes default bullet points */
+}
+
+/* --- Individual Task (LI) --- */
+#task_list li {
+  display: flex;
+  justify-content: space-between; /* Pushes text and button apart */
+  align-items: center;
+  
+  font-size: 1rem;
+  color: #111;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  
+  word-break: break-word; /* Prevents long tasks from overflowing */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+#task_list li:hover {
+  transform: scale(1.02); /* Makes the task "pop" on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Delete Button (inside LI) --- */
+#task_list li button {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ff4d4d; /* A clear "delete" red */
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%; /* Makes it a circle */
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  
+  /* Flex properties to center the 'X' */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Ensures the button doesn't shrink */
+  flex-shrink: 0;
+  margin-left: 15px; /* Adds space between text and button */
+  
+  transition: all 0.3s ease;
+}
+
+#task_list li button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+  transform: rotate(90deg) scale(1.1); /* Fun rotate effect */
+}
